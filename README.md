@@ -26,7 +26,7 @@ Direct browser-to-DBC transaction broadcast is still being integrated. However, 
 
 ## Interface
 
-![IDART Launch Builder](screenshots/01-launch-builder.png)
+![IDART Launch Builder](01-launch-builder.png)
 
 The hackathon UI prepares and exports a structured Meteora DBC launch configuration and clearly distinguishes the browser configuration layer from the already-validated Devnet engine.
 
@@ -34,7 +34,7 @@ The hackathon UI prepares and exports a structured Meteora DBC launch configurat
 
 ### 1. Graduation reached safely
 
-![100 percent graduation](screenshots/02-graduation-100.png)
+![100 percent graduation](02-graduation-100.png)
 
 The final DBC state reached:
 
@@ -48,13 +48,13 @@ This demonstrates that the final purchase did **not** need to match the remainin
 
 ### 2. DAMM v2 migration
 
-![DAMM v2 migration](screenshots/03-damm-v2-migration.png)
+![DAMM v2 migration](03-damm-v2-migration.png)
 
 After graduation, the DBC pool was successfully migrated to Meteora DAMM v2.
 
 ### 3. Final migrated state
 
-![Migrated status](screenshots/04-migrated-status.png)
+![Migrated status](04-migrated-status.png)
 
 Final status confirmed:
 
@@ -131,13 +131,14 @@ IDART Fun Launchpad was built for **Stocklana 2026** with a focus on:
 - **Meteora — Best Use of DBC**
 - **PreStocks — Best Use of PreStocks**
 
-## Architecture
+## Documentation
 
-- [Architecture Overview](docs/ARCHITECTURE.md)
-- [Market Design](docs/MARKET_DESIGN.md)
-- [Economics](docs/ECONOMICS.md)
-- [Submission Snapshot](docs/SUBMISSION_SNAPSHOT.md)
-- [Roadmap](docs/ROADMAP.md)
+- [Architecture Overview](ARCHITECTURE.md)
+- [Market Design](MARKET_DESIGN.md)
+- [Economics](ECONOMICS.md)
+- [Submission Snapshot](SUBMISSION_SNAPSHOT.md)
+- [Roadmap](ROADMAP.md)
+- [Security](SECURITY.md)
 
 Implementation details, proprietary application code, deployment secrets, fee-routing logic, and internal market-configuration algorithms are intentionally not published in this showcase repository.
 
