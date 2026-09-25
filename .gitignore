@@ -1,0 +1,9 @@
+.env
+.env.*
+node_modules/
+*.keypair.json
+keypair.json
+*.secret
+*.log
+.DS_Store
+Thumbs.db
