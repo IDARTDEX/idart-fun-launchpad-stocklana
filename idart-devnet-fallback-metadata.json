@@ -1,0 +1,12 @@
+{
+  "name": "IDART Fun Launchpad Devnet Token",
+  "symbol": "IDART",
+  "description": "Generic fallback metadata for tokens launched during IDART Fun Launchpad Devnet testing. The on-chain token name and symbol are set by the creator at launch.",
+  "image": "https://launchpad.idartdex.xyz/wp-content/uploads/2026/09/IDART-DEX-3D-HD.gif",
+  "external_url": "https://launchpad.idartdex.xyz",
+  "attributes": [
+    {"trait_type": "Launchpad", "value": "IDART Fun Launchpad"},
+    {"trait_type": "Network", "value": "Solana Devnet"},
+    {"trait_type": "Engine", "value": "Meteora DBC"}
+  ]
+}
