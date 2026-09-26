@@ -30,13 +30,9 @@ The live on-chain fee display showed a creator/partner fee allocation consistent
 
 ## What the screenshots show
 
-### Full browser flow
-
-![Browser end-to-end launch](05-browser-end-to-end-launch-full.png)
+### Full browser flow and Final migrated market state
 
 The full launch panel shows the wallet-signed launch configuration, the live on-chain market, 100% bonding, and confirmed DAMM v2 migration.
-
-### Final migrated market state
 
 ![Browser market migrated](06-browser-market-migrated.png)
 
