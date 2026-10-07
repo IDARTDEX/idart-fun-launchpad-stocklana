@@ -1,272 +1,194 @@
-# IDART Fun Launchpad
+IDART FUN
+Design the Market. Launch the Asset.
+IDART FUN is a Solana-native programmable market launchpad built on Meteora Dynamic Bonding Curve (DBC).
+Creators can configure how a market launches instead of using one fixed template: token, quote asset, Market Profile, economics mode, creator first buy, bonding path and graduation to Meteora DAMM v2.
+Stocklana submission repository
+This repository remains the public record of the IDART FUN Stocklana 2026 submission.
+The original submission state is preserved in [`SUBMISSION_SNAPSHOT.md`](./SUBMISSION_SNAPSHOT.md).
+The sections marked Post-Submission Progress document development completed after the submission deadline and are not presented as features that existed at submission time.
 
-**Design the market. Launch the asset.**
+Live Product
+- IDART FUN: https://idartfun.xyz
+- Launch: https://idartfun.xyz/launch/
+- API for Builders — Coming Soon: https://idartfun.xyz/idart-api-for-builders/
+- X: https://x.com/IDARTFun_Launch
+- Legacy submission URL: https://launchpad.idartdex.xyz → redirects to the current IDART FUN domain
+IDART FUN is now being developed as an independent product within the broader IDART ecosystem.
+Post-Submission Progress · October 2026
+Since the Stocklana submission, IDART FUN has progressed from its submitted MVP into a substantially more complete launchpad with a validated browser-native lifecycle.
+Core lifecycle now validated
+- ✅ Solana Devnet end-to-end launch
+- ✅ Solana Mainnet end-to-end launch with real SOL
+- ✅ Meteora DBC config + pool creation
+- ✅ wallet-signed swaps
+- ✅ creator first buy / Dev Buy
+- ✅ live bonding progress
+- ✅ graduation-safe PartialFill
+- ✅ 100% bonding
+- ✅ successful DBC → DAMM v2 migration
+- ✅ creator and partner fee accrual
+- ✅ recovery of an existing market without recreating the token or pool
+- ✅ public Mainnet and Devnet validation archives in the Launch UI
+Product layer now available
+- configurable Market Profiles
+- configurable Economics modes
+- production Mainnet market-cap targets
+- public token metadata preparation
+- project links / social metadata fields
+- Launch Review before transaction signing
+- mandatory safety and risk acknowledgements
+- browser wallet integration
+- Mainnet transaction simulation before approval
+- Discovery Markets foundation
+- API for Builders preview
+- responsive desktop/mobile UI
+In active development
+- Holder Rewards Router and holder claims
+- real Discovery market indexing
+- Market Detail pages and analytics
+- xStocks / PreStocks Quote Asset Registry
+- Token-2022 compatibility filtering
+- Builders API / SDK / low-code embeds
+- partner attribution and builder-originated transaction economics
+- transaction-size hardening using Address Lookup Tables where appropriate
+- additional wallet-security compatibility improvements
+Verified Mainnet Lifecycle
+A real IDART FUN Mainnet market was launched and graduated through the full lifecycle:
+Create → Meteora DBC → Buy / Trade → 100% Bonding → DAMM v2
+Mainnet validation market
+- Token: Meme Tesla Club Test
+- Symbol: MEMET
+- Base Mint: 3qekQqW4YLLTjNPfaSB8AaQ9MUpTcthck4qKARM7uhSL
+- DBC Pool: 2K1PYMVUChhBLPwfQ5ZAjgFwVTPXa34UKdGJkQwrrTFm
+- Network: Solana Mainnet
+- Final Bonding: 100%
+- Final Migration: DAMM v2
+- Status: Migrated
+Mainnet proof
+- Launch + initial buy transaction:
+  https://explorer.solana.com/tx/5SPwDnURxJeANhUJawmb9Zb7cifBZcMnCgTtwgCwSTJ9Xy2Sz4MeYGgTp61QscAjxKLqEhriiCgEspbgm3jMPU4R
+- Base Mint:
+  https://explorer.solana.com/address/3qekQqW4YLLTjNPfaSB8AaQ9MUpTcthck4qKARM7uhSL
+- DBC Pool:
+  https://explorer.solana.com/address/2K1PYMVUChhBLPwfQ5ZAjgFwVTPXa34UKdGJkQwrrTFm
+- Market view:
+  https://dexscreener.com/solana/2k1pymvuchhblpwfq5zajgfwvtpxa34ukdgjkqwrrtfm
+The live Launch page also exposes a Verified Mainnet Validation Archive so evaluators can inspect the completed lifecycle without initiating another Mainnet test.
+No additional Mainnet testing is required for the Stocklana evaluation. Future Mainnet validations will be performed only when necessary for new protocol features.
 
-IDART Fun Launchpad is a Solana-native market-design launchpad built around **Meteora Dynamic Bonding Curve (DBC)**.
-
-Rather than exposing creators to low-level market configuration, IDART turns configurable launch mechanics into a simple product flow: choose the asset, quote market, market profile, economics model, and graduation strategy.
-
-## Live Demo
-
-**https://launchpad.idartdex.xyz**
-
----
-
-## Current Status
-
-The project now has two distinct validation milestones:
-
-### 1. Stocklana submission-deadline validation
-
-At the Stocklana submission deadline, the browser interface supported wallet connection, token/market configuration, quote-asset selection, market profiles, economics modes, and exportable launch configuration generation.
-
-The underlying Meteora DBC engine had already been validated **end-to-end on Solana Devnet** through the Meteora Invent/SDK workflow:
-
-- real DBC config creation
-- real token / virtual pool creation
-- real DBC swaps
-- separate creator and partner fee accrual
-- graduation-safe final buy using `swapQuote2 + swap2 + SwapMode.PartialFill`
-- 100% bonding-curve graduation
-- successful migration to **Meteora DAMM v2**
-
-The historical state at submission time is preserved in [`SUBMISSION_SNAPSHOT.md`](SUBMISSION_SNAPSHOT.md).
-
-### 2. Browser-native on-chain validation — post-submission update
-
-**September 26, 2026:** continued development after the Stocklana submission deadline.
-
-The public IDART Fun Launchpad has now completed the same core lifecycle **directly from the browser using wallet-signed Solana Devnet transactions**:
-
-**Connect Wallet → Create DBC Config → Create Token / Pool → Buy → Read Live Bonding Progress → PartialFill → 100% Bonding → Migrate to DAMM v2**
-
-This second validation was completed without relying on the PowerShell/CLI execution path used for the original proof.
-
-The browser flow now provides:
-
-- real wallet-signed DBC config creation
-- real token mint and virtual-pool creation
-- application-generated Base Mint, DBC Pool, Config and transaction links
-- browser-based DBC buys
-- live bonding progress read from Solana
-- live quote reserve and migration threshold
-- live creator / partner fee accrual
-- graduation-safe `PartialFill`
+Verified Devnet Lifecycle
+The original Devnet validation remains part of the submission evidence.
+Devnet identifiers
+- Base Mint: 8B1cJpMukfEbK5wJYixSnkpn5eGZWPpmtrRVPbYtPXZz
+- DBC Pool: DYi5X52fshUZ3fYnex8Jbs1usFS5vT9zTAC4Tz4ooYEA
+- DBC Config: DpLXcMud36KpyC6dxZQrjHyJRetWeF3M3yf6TsR2T9sC
+Devnet transactions
+- Create Config: 5bHRDBH6eU39M9fTo6XKoFJpXpLsk54WyzU3YP9XwctEkbVU23YjSZ3Nri6ZpihsgSFdP4NYgvqVjrmo113EBxMc
+- Create Pool: 5pnrQCLxri2qhrZkJAb8KUEnFymtLEK53S2qzZiPKYQqJGXwF4fuzrH3meCZR2gvq5MEfqmsatcroMYj4p2fVnJv
+- First Swap: 5ovFiywgwuXbsZcJ3uVGLDLnkkbtXVsfYSNpDp5JYqFE7SKadUCqEcTfQGGgHZuePqDGiSQjAPotCavKX4sKQeEr
+- Graduation-safe PartialFill: r8Vvmoi6g2CVJbsoEJJ76d7rNFefa4q751gr3ifLJyWuR2Toy4StftkvT4rqYrJZsbw2pyHDQ94MqTSHzUoqnvm
+The Devnet validation demonstrated:
+- real config and pool creation
+- real swaps
+- creator / partner fee accrual
+- graduation-safe PartialFill
 - 100% bonding
-- browser-initiated DAMM v2 migration
-- final `MIGRATED` market state
+- successful DAMM v2 migration
+Market Design
+IDART FUN is designed as a market-design layer over Meteora, not only a token generator.
+Market Profiles
+Profile	Starting MC Reference	Graduation MC Reference	Intent
+Discovery	28 SOL	300 SOL	early price discovery
+Balanced	35 SOL	350 SOL	general-purpose launches
+Asset Quote	40 SOL	450 SOL	quote-asset / RWA-style markets
 
-The browser test also validated the **Creator First** economics profile. The final displayed fee accrual was:
 
-- Creator: `0.00094089 SOL`
-- Partner: `0.000403239 SOL`
+These are market-cap references used by the launch configuration, not claims about guaranteed liquidity or token value.
+Economics Modes
+The public design keeps the total trading fee fixed at 2.50% while changing the allocation logic.
+Economics Mode	Creator	Holder Allocation	Protocol
+Creator First · Standard	60%	10%	30%
+All Win · Balanced	35%	35%	30%
+Holder Rewards · Community	10%	60%	30%
 
-That is approximately a **70% Creator / 30% Partner** allocation, matching the economics profile selected before launch.
 
-See [`POST_SUBMISSION_BROWSER_VALIDATION.md`](POST_SUBMISSION_BROWSER_VALIDATION.md) for the post-submission validation notes.
-
----
-
-## Interface
-
-![IDART Launch Builder](01-launch-builder.png)
-
-The launch interface turns Meteora DBC configuration into a guided market-design flow while keeping wallet approval under the user's control.
-
----
-
-## Browser-native End-to-End Validation
-
-The screenshot below focuses exclusively on the **new market launched directly from the public IDART Fun Launchpad interface**.
-
-Unlike the original Stocklana validation, which used the Meteora Invent/SDK workflow from the development environment, this market was created, traded through the bonding curve, graduated and migrated **from the website itself using wallet-signed transactions**.
-
-![Browser-launched market migrated](06-browser-market-migrated.png)
-
-The browser-launched market reached:
-
-- real token mint and Meteora DBC pool creation from the website
-- live browser-based DBC buys
-- `100.00%` bonding progress
-- the configured quote-reserve graduation threshold
-- live creator / partner fee accrual
-- the selected **Creator First** economics reflected on-chain at approximately **70% Creator / 30% Partner**
-- graduation-safe `PartialFill`
-- successful migration to **Meteora DAMM v2**
-- final `MIGRATED` status
-
-The application also generated direct links for the token, Base Mint, DBC Pool, Config, creation transactions and migration transaction, allowing the browser-created market to be independently verified on Solana Devnet.
-
----
-
-## Original End-to-End Devnet Proof
-
-The first complete DBC validation was executed during the hackathon through the Meteora Invent/SDK workflow and is retained as the original technical proof.
-
-### 1. Graduation reached safely
-
-![100 percent graduation](02-graduation-100.png)
-
-The final DBC state reached:
-
-- Quote reserve: `200000001` quote base units
-- Migration threshold: `200000000` quote base units
-- Graduation: `100.00%`
-- Creator fees unclaimed: `931108` quote base units
-- Partner fees unclaimed: `931108` quote base units
-
-The final purchase did **not** need to match the remaining threshold exactly. IDART's graduation-safe swap path used Meteora `PartialFill`, allowing the buy to consume only the remaining curve capacity.
-
-### 2. DAMM v2 migration
-
-![DAMM v2 migration](03-damm-v2-migration.png)
-
-After graduation, the DBC pool was successfully migrated to Meteora DAMM v2.
-
-### 3. Final migrated state
-
-![Migrated status](04-migrated-status.png)
-
-Final status confirmed:
-
-- `Graduation: 100.00%`
-- `Migrated: yes`
-- creator and partner fees remained accounted for
-
----
-
-## Original On-Chain Devnet Identifiers
-
-- **Base Mint:** `8B1cJpMukfEbK5wJYixSnkpn5eGZWPpmtrRVPbYtPXZz`
-- **DBC Pool:** `DYi5X52fshUZ3fYnex8Jbs1usFS5vT9zTAC4Tz4ooYEA`
-- **DBC Config:** `DpLXcMud36KpyC6dxZQrjHyJRetWeF3M3yf6TsR2T9sC`
-
-### Original Devnet transactions
-
-- **Create Config:** `5bHRDBH6eU39M9fTo6XKoFJpXpLsk54WyzU3YP9XwctEkbVU23YjSZ3Nri6ZpihsgSFdP4NYgvqVjrmo113EBxMc`
-- **Create Pool:** `5pnrQCLxri2qhrZkJAb8KUEnFymtLEK53S2qzZiPKYQqJGXwF4fuzrH3meCZR2gvq5MEfqmsatcroMYj4p2fVnJv`
-- **First Swap:** `5ovFiywgwuXbsZcJ3uVGLDLnkkbtXVsfYSNpDp5JYqFE7SKadUCqEcTfQGGgHZuePqDGiSQjAPotCavKX4sKQeEr`
-- **Graduation-safe PartialFill Swap:** `r8Vvmoi6g2CVJbsoEJJ76d7rNFefa4q751gr3ifLJyWuR2Toy4StftkvT4rqYrJZsbw2pyHDQ94MqTSHzUoqnvm`
-
----
-
-## What Makes IDART Different
-
-IDART is designed as a **market-design layer**, not only a token-creation form.
-
-It combines:
-
-- **Meteora DBC market design**
-- configurable market profiles
-- flexible economics modes
-- creator / partner fee allocation
-- live bonding progress
-- graduation-safe PartialFill trading
-- DAMM v2 graduation
-- a product path for stock-paired and PreStock-paired markets
-
-The goal is to let the creator define **how the market launches and how its economics are structured**.
-
----
-
-## Market Profiles
-
-- **Equity Quote** — intended for stock-token quote-market configurations
-- **Discovery** — designed for early price discovery
-- **Balanced** — a general-purpose configuration
-
-The current browser-tested live Devnet flow uses SOL as the quote asset.
-
----
-
-## Economics Modes
-
-- **Creator First** — browser validation confirmed a 70% Creator / 30% Partner fee allocation in the tested market
-- **All-Win**
-- **Holder Rewards**
-
-Meteora DBC provides the native creator/partner fee-sharing layer.
-
-IDART's planned Holder Rewards mechanism is an additional rewards-vault layer and is **not represented as natively distributed to holders until that vault is deployed**.
-
----
-
-## Quote Markets
-
-IDART's market-design interface is built around the idea that a creator should be able to select more than one quote-market type.
-
-Current / planned quote categories include:
-
+Meteora DBC provides native creator / partner fee accounting.
+IDART's holder-by-holder Rewards Router is a separate protocol layer and remains under active development; the public product does not claim that holder claims are fully deployed until that router is live.
+Creator First Buy / Dev Buy
+Creators may optionally participate in the launch transaction with a first buy.
+The production UI supports a configurable creator first-buy percentage and recalculates the exact Meteora quote before signing.
+As a reference, a 5% creator first buy under the Discovery starting market-cap profile is approximately 1.5 SOL, but the actual transaction quote is authoritative.
+Quote Markets
+IDART FUN is being designed to support:
 - SOL
 - USDC
-- xStocks / tokenized public-equity assets
-- PreStocks / tokenized pre-IPO assets
-- compatible Solana tokens
-
-Examples of the intended market model:
-
-`Creator Token / TSLAx`
-
-`Creator Token / OPENAI PreStock`
-
-**Current implementation note:** the browser-native on-chain flow has been validated with **SOL on Devnet**. xStocks and PreStocks are mainnet assets and their live quote execution remains the next integration step, including Token-2022 / Meteora token-badge compatibility checks where required.
-
----
-
-## Lifecycle
-
-`Create → Design Market → Meteora DBC → Trade → Bonding Progress → DAMM v2`
-
-The browser-native Devnet validation has now demonstrated this lifecycle end-to-end for a SOL-quoted market.
-
----
-
-## Stocklana 2026
-
-IDART Fun Launchpad was submitted to **Stocklana 2026** with a focus on:
-
-- **Main Track**
-- **Meteora — Best Use of DBC**
-- **PreStocks — Best Use of PreStocks**
-
-The original submission snapshot remains preserved separately so post-deadline development is not presented as if it existed before the deadline.
-
----
-
-## Documentation
-
-- [Architecture Overview](ARCHITECTURE.md)
-- [Market Design](MARKET_DESIGN.md)
-- [Economics](ECONOMICS.md)
-- [Submission Snapshot](SUBMISSION_SNAPSHOT.md)
-- [Post-Submission Browser Validation](POST_SUBMISSION_BROWSER_VALIDATION.md)
-- [Roadmap](ROADMAP.md)
-- [Security](SECURITY.md)
-
-The **Roadmap remains a separate repository document** rather than being duplicated inside this README.
-
-Implementation details, proprietary application code, deployment secrets, fee-routing logic, and internal market-configuration algorithms are intentionally not published in this public showcase repository.
-
----
-
-## Security
-
-- IDART never requests a seed phrase.
-- Private keys are not published in this repository.
-- Wallet users approve their own transactions.
-- Browser transactions are simulated / validated before broadcast where supported by the flow.
-- Mainnet execution should only be enabled after quote-mint compatibility, wallet warnings and transaction paths have been validated.
-- This hackathon build should not be treated as a security audit.
-
----
-
-## Links
-
-- **Launchpad:** https://launchpad.idartdex.xyz
-- **IDARTDEX:** https://idartdex.xyz
-- **X:** https://x.com/IDARTDex_Coin
-- **Telegram:** https://t.me/IDARTCoin
-
----
-
-© 2026 IDARTDEX. All rights reserved.
+- compatible Solana SPL tokens
+- compatible Token-2022 assets
+- xStocks / tokenized public equities
+- compatible PreStocks / pre-IPO market assets
+Meteora ecosystem guidance confirmed that Token-2022 xStocks can be used as DBC quote mints and that Scaled UI Amount is not itself a blocker. IDART is building its own Quote Asset Registry to inspect mint properties and expose only supported configurations.
+Transfer Hook assets require additional DAMM v2 compatibility handling and are treated separately.
+API for Builders · Coming Soon
+IDART FUN is being designed so third-party builders can integrate the market layer into dApps and websites without receiving IDART's proprietary application code.
+Planned integration levels include:
+- Low-code widgets / embeds
+- documented API
+- SDK / transaction builders
+- custom partner integrations
+- market discovery and market-state endpoints
+- launch preparation
+- swap quote / transaction preparation
+- builder attribution
+Preview:
+https://idartfun.xyz/idart-api-for-builders/
+Security & Transaction Hardening
+IDART FUN is non-custodial:
+- users sign their own transactions
+- IDART never requests seed phrases or private keys
+- Mainnet transactions are simulated before broadcast
+- broadcast transactions are not automatically resent when confirmation is uncertain
+- pending transactions are reconciled before retry
+- market recovery does not recreate an existing token or pool
+- risk acknowledgements are required before on-chain launch, swap, migration and claim actions
+Following wallet-security feedback, the production transaction path is also being hardened around:
+- wallet-first signing order for multi-signer transactions
+- additional signers applied after wallet signing where required
+- transaction-size monitoring
+- Address Lookup Tables where appropriate
+- preserving room for wallet security instructions
+- splitting oversized / excessive-compute workflows when necessary
+What Makes IDART FUN Different
+IDART FUN combines:
+- configurable market design
+- Meteora DBC launch infrastructure
+- multiple quote-asset strategies
+- Market Profiles
+- flexible fee economics
+- creator / holder / protocol incentive design
+- creator first buy
+- graduation-safe PartialFill
+- DAMM v2 graduation
+- planned stock-token / PreStock quote markets
+- planned Builder API, SDK and embeds
+The goal is not merely to launch a token. It is to let creators and builders define how a market launches, how it graduates and how its economics are structured.
+Stocklana 2026
+IDART FUN was submitted to Stocklana 2026 with a focus on:
+- Main Track
+- Meteora — Best Use of DBC
+- PreStocks — Best Use of PreStocks
+The project has continued evolving after submission.
+Post-submission work is documented transparently and is not retroactively presented as part of the original deadline build.
+Documentation
+- [Architecture Overview](./ARCHITECTURE.md)
+- [Market Design](./MARKET_DESIGN.md)
+- [Economics](./ECONOMICS.md)
+- [Submission Snapshot](./SUBMISSION_SNAPSHOT.md)
+- [Roadmap](./ROADMAP.md)
+- [Security](./SECURITY.md)
+- [Mainnet Validation](./MAINNET_VALIDATION.md)
+Implementation details, proprietary application code, deployment secrets, fee-routing implementation and internal market-configuration algorithms are intentionally not published in this showcase repository.
+Project Identity
+IDART FUN began inside the broader IDART ecosystem and is now being developed as an independent launchpad and programmable market-infrastructure product.
+The existing IDARTDEX GitHub organization remains the owner of this Stocklana submission repository so the original hackathon URL and provenance stay stable throughout judging.
+Future IDART FUN development may move to a dedicated IDART FUN organization/repository without modifying the historical Stocklana submission record.
+© 2026 IDART FUN / IDART ecosystem.
