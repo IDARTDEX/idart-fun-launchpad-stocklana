@@ -1,6 +1,6 @@
 # IDART FUN
 
-### Design the Market. Launch the Asset.
+## Design the Market. Launch the Asset.
 
 **IDART FUN** is a Solana-native programmable market launchpad built on **Meteora Dynamic Bonding Curve (DBC)**.
 
@@ -8,19 +8,20 @@ Creators can configure how a market launches — including the token, quote asse
 
 ---
 
-## 🌐 Live Product
+# 🌐 Live Product
 
 - **Website:** https://idartfun.xyz
 - **Launch:** https://idartfun.xyz/launch/
 - **API for Builders — Coming Soon:** https://idartfun.xyz/idart-api-for-builders/
 - **X:** https://x.com/IDARTFun_Launch
-- **Legacy Stocklana URL:** https://launchpad.idartdex.xyz  
-  Redirects to the current IDART FUN domain.
+- **Legacy Stocklana URL:** https://launchpad.idartdex.xyz
 
 > **Stocklana repository notice**
 >
 > This repository remains the public record of the **Stocklana 2026 submission**.
+>
 > The original submission state is preserved in [`SUBMISSION_SNAPSHOT.md`](./SUBMISSION_SNAPSHOT.md).
+>
 > Features completed after the deadline are clearly identified below as **Post-Submission Progress**.
 
 ---
@@ -29,7 +30,7 @@ Creators can configure how a market launches — including the token, quote asse
 
 Since the Stocklana submission, IDART FUN has progressed from its submitted MVP into a substantially more complete launchpad with a validated browser-native lifecycle.
 
-## Core lifecycle now validated
+## Core Lifecycle Now Validated
 
 - ✅ Solana Devnet end-to-end launch
 - ✅ Solana Mainnet end-to-end launch with real SOL
@@ -44,7 +45,7 @@ Since the Stocklana submission, IDART FUN has progressed from its submitted MVP 
 - ✅ Existing-market recovery without recreating the token or pool
 - ✅ Devnet and Mainnet validation archives in the Launch UI
 
-## Product layer now available
+## Product Layer Now Available
 
 - Configurable Market Profiles
 - Configurable Economics modes
@@ -59,7 +60,7 @@ Since the Stocklana submission, IDART FUN has progressed from its submitted MVP 
 - API for Builders preview
 - Responsive desktop and mobile UI
 
-## In active development
+## In Active Development
 
 - Holder Rewards Router and holder claims
 - Live Discovery Markets indexing
@@ -75,11 +76,13 @@ Since the Stocklana submission, IDART FUN has progressed from its submitted MVP 
 
 # 🚀 Verified Mainnet Lifecycle
 
-IDART FUN completed a real Mainnet launch through the full market lifecycle:
+IDART FUN completed and publicly verified a real Mainnet launch through the full market lifecycle:
+
+## Mainnet Flow
 
 `Create → Meteora DBC → Buy / Trade → 100% Bonding → DAMM v2`
 
-## Mainnet validation market
+## Mainnet Validation Market
 
 | Field | Value |
 |---|---|
@@ -92,19 +95,36 @@ IDART FUN completed a real Mainnet launch through the full market lifecycle:
 | **Migration** | **DAMM v2** |
 | **Final State** | **Migrated** |
 
-## Mainnet proof
+## Mainnet Proof
 
-- **Launch + Initial Buy TX**  
-  https://explorer.solana.com/tx/5SPwDnURxJeANhUJawmb9Zb7cifBZcMnCgTtwgCwSTJ9Xy2Sz4MeYGgTp61QscAjxKLqEhriiCgEspbgm3jMPU4R
+### Launch + Initial Buy TX
 
-- **Base Mint**  
-  https://explorer.solana.com/address/3qekQqW4YLLTjNPfaSB8AaQ9MUpTcthck4qKARM7uhSL
+https://explorer.solana.com/tx/5SPwDnURxJeANhUJawmb9Zb7cifBZcMnCgTtwgCwSTJ9Xy2Sz4MeYGgTp61QscAjxKLqEhriiCgEspbgm3jMPU4R
 
-- **DBC Pool**  
-  https://explorer.solana.com/address/2K1PYMVUChhBLPwfQ5ZAjgFwVTPXa34UKdGJkQwrrTFm
+### Base Mint
 
-- **External Market View**  
-  https://dexscreener.com/solana/2k1pymvuchhblpwfq5zajgfwvtpxa34ukdgjkqwrrtfm
+https://explorer.solana.com/address/3qekQqW4YLLTjNPfaSB8AaQ9MUpTcthck4qKARM7uhSL
+
+### DBC Pool
+
+https://explorer.solana.com/address/2K1PYMVUChhBLPwfQ5ZAjgFwVTPXa34UKdGJkQwrrTFm
+
+### External Market View
+
+https://dexscreener.com/solana/2k1pymvuchhblpwfq5zajgfwvtpxa34ukdgjkqwrrtfm
+
+### DAMM v2 Migration TX
+
+https://solscan.io/tx/43BAGHCMeDpsgPyQSBZpXioBdQ6WmiHWfSvvz6waAiue3bjAsDC1oHFKPjuCvipedwvcsxV9kuTv7MCHQeSTUJZg
+
+![Verified Mainnet DAMM v2 migration](./06-mainnet-damm-v2-migration.png)
+
+## Migration Confirmation
+
+- **Result:** SUCCESS
+- **Status:** Finalized
+- **Instruction:** `Migration_damm_v2`
+- **Migration Target:** Meteora DAMM v2
 
 The public Launch page also includes a **Verified Mainnet Validation Archive** so evaluators can inspect the completed lifecycle without initiating another Mainnet test.
 
@@ -114,7 +134,7 @@ The public Launch page also includes a **Verified Mainnet Validation Archive** s
 
 The original Devnet validation remains part of the submission evidence.
 
-## Devnet identifiers
+## Devnet Identifiers
 
 | Field | Address |
 |---|---|
@@ -122,14 +142,14 @@ The original Devnet validation remains part of the submission evidence.
 | **DBC Pool** | `DYi5X52fshUZ3fYnex8Jbs1usFS5vT9zTAC4Tz4ooYEA` |
 | **DBC Config** | `DpLXcMud36KpyC6dxZQrjHyJRetWeF3M3yf6TsR2T9sC` |
 
-## Devnet transactions
+## Devnet Transactions
 
 - **Create Config:** `5bHRDBH6eU39M9fTo6XKoFJpXpLsk54WyzU3YP9XwctEkbVU23YjSZ3Nri6ZpihsgSFdP4NYgvqVjrmo113EBxMc`
 - **Create Pool:** `5pnrQCLxri2qhrZkJAb8KUEnFymtLEK53S2qzZiPKYQqJGXwF4fuzrH3meCZR2gvq5MEfqmsatcroMYj4p2fVnJv`
 - **First Swap:** `5ovFiywgwuXbsZcJ3uVGLDLnkkbtXVsfYSNpDp5JYqFE7SKadUCqEcTfQGGgHZuePqDGiSQjAPotCavKX4sKQeEr`
 - **Graduation-safe PartialFill:** `r8Vvmoi6g2CVJbsoEJJ76d7rNFefa4q751gr3ifLJyWuR2Toy4StftkvT4rqYrJZsbw2pyHDQ94MqTSHzUoqnvm`
 
-### Devnet validation demonstrated
+## Devnet Validation Demonstrated
 
 - Real DBC config creation
 - Real token / virtual pool creation
@@ -153,7 +173,9 @@ IDART FUN is designed as a **market-design layer over Meteora**, not only a toke
 | **Balanced** | 35 SOL | 350 SOL | General-purpose launches |
 | **Asset Quote** | 40 SOL | 450 SOL | Quote-asset / RWA-style markets |
 
-> These are market-cap reference parameters used by the launch configuration. They are not guarantees of liquidity, price or future value.
+> These are market-cap reference parameters used by the launch configuration.
+>
+> They are not guarantees of liquidity, price or future value.
 
 ---
 
@@ -169,7 +191,9 @@ The public design keeps the total trading fee fixed at **2.50%**, while the allo
 
 Meteora DBC provides native **Creator / Partner** fee accounting.
 
-IDART's holder-by-holder **Rewards Router** is a separate protocol layer and remains under active development. The public product does not claim holder claims are fully deployed until that router is live.
+IDART's holder-by-holder **Rewards Router** is a separate protocol layer and remains under active development.
+
+The public product does not claim holder claims are fully deployed until that router is live.
 
 ---
 
@@ -179,11 +203,11 @@ Creators may optionally participate in the launch transaction with a first buy.
 
 The production UI supports a configurable creator first-buy percentage and recalculates the exact Meteora quote before signing.
 
-As a reference:
+## Example Reference
 
-- **Discovery profile**
-- **5% Creator First Buy**
-- approximately **1.5 SOL**
+- **Profile:** Discovery
+- **Creator First Buy:** 5%
+- **Approximate reference:** 1.5 SOL
 
 The actual Meteora quote shown before wallet signing is authoritative.
 
@@ -210,7 +234,7 @@ Transfer Hook assets require additional DAMM v2 compatibility handling and are t
 
 IDART FUN is being designed so third-party builders can integrate its market infrastructure into dApps and websites without receiving IDART's proprietary application code.
 
-## Planned integration options
+## Planned Integration Options
 
 - Low-code widgets / embeds
 - Documented API
@@ -222,7 +246,8 @@ IDART FUN is being designed so third-party builders can integrate its market inf
 - Swap quote / transaction preparation
 - Builder attribution
 
-**Preview:**  
+## Preview
+
 https://idartfun.xyz/idart-api-for-builders/
 
 ---
@@ -231,6 +256,8 @@ https://idartfun.xyz/idart-api-for-builders/
 
 IDART FUN is non-custodial.
 
+## Core Security Principles
+
 - Users sign their own transactions
 - IDART never requests seed phrases or private keys
 - Mainnet transactions are simulated before broadcast
@@ -238,6 +265,8 @@ IDART FUN is non-custodial.
 - Pending transactions are reconciled before retry
 - Market recovery does not recreate an existing token or pool
 - Risk acknowledgements are required before on-chain launch, swap, migration and claim actions
+
+## Production Hardening
 
 Following wallet-security feedback, the production transaction path is also being hardened around:
 
@@ -310,8 +339,8 @@ Future IDART FUN development can move to a dedicated IDART FUN GitHub presence w
 
 ---
 
-### IDART FUN
+# IDART FUN
 
-**Design the Market. Launch the Asset.**
+## Design the Market. Launch the Asset.
 
 © 2026 IDART FUN / IDART ecosystem.
