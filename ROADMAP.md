@@ -4,7 +4,7 @@
 
 **IDART FUN** is evolving from a configurable launchpad into a broader programmable market-infrastructure layer built on **Meteora Dynamic Bonding Curve (DBC)** and Solana.
 
-This roadmap reflects the current project status after the original Stocklana submission and the subsequent Devnet and Mainnet validation work.
+This roadmap reflects the current project status after the original Stocklana submission and the subsequent Devnet, Mainnet, Discovery Markets, token-detail and multi-asset quote-market validation work.
 
 ---
 
@@ -44,15 +44,15 @@ IDART FUN introduces configurable market design instead of a single fixed launch
 
 ### Market Profiles
 
-- [x] **Discovery**
+- [x] **⚡ Lightning**
   - Starting MC reference: `28 SOL`
   - Graduation MC reference: `300 SOL`
 
-- [x] **Balanced**
+- [x] **⚖️ Smooth Graduation**
   - Starting MC reference: `35 SOL`
   - Graduation MC reference: `350 SOL`
 
-- [x] **Asset Quote**
+- [x] **📈 Scale Up**
   - Starting MC reference: `40 SOL`
   - Graduation MC reference: `450 SOL`
 
@@ -94,10 +94,15 @@ IDART FUN introduces configurable market design instead of a single fixed launch
 
 - [x] Dedicated domain: `https://idartfun.xyz`
 - [x] Dedicated Launch page
+- [x] Dedicated Discovery Markets page
+- [x] Dedicated token-market index at `/token/`
+- [x] Dedicated Mainnet market-detail page for MEMET
 - [x] Dedicated IDART FUN X profile
 - [x] Legacy Stocklana URL redirected to the current domain
-- [x] Responsive desktop and mobile interface
+- [x] Responsive desktop, tablet and mobile interface
 - [x] Dedicated Builders API preview page
+- [x] Public GitHub links surfaced in the product UI
+- [x] Dedicated Privacy Policy page
 
 ### Public Launch UX
 
@@ -113,130 +118,130 @@ IDART FUN introduces configurable market design instead of a single fixed launch
 
 ---
 
-# 🚧 Phase 4 — Discovery Markets
+# ✅ Phase 4 — Discovery Markets
 
-## Status: Next Priority
+## Status: Public Product Layer Live
 
-The next major product milestone is to turn IDART FUN from a launch interface into a navigable market-discovery platform.
+Discovery Markets is now a public navigable surface rather than a future-only milestone.
 
-### Planned
+### Implemented
 
-- [ ] Index real IDART launches
-- [ ] Market cards
-- [ ] Token / symbol search
-- [ ] Filter by network
-- [ ] Filter by quote asset
-- [ ] Filter by Market Profile
-- [ ] Filter by Economics mode
-- [ ] Sort by market cap
-- [ ] Sort by volume
-- [ ] Sort by bonding progress
-- [ ] Graduation status
-- [ ] DAMM v2 migration status
-- [ ] Recently launched markets
-- [ ] Trending markets
+- [x] Public market cards
+- [x] Token / symbol search
+- [x] Quote-asset filtering
+- [x] Market-status filtering
+- [x] Sorting controls
+- [x] Card / table views
+- [x] Mainnet MEMET reference market
+- [x] Devnet IDDEMO reference market
+- [x] xStocks route visibility
+- [x] PreStocks route visibility
+- [x] USDC route visibility
+- [x] Solana-token quote route visibility
+- [x] Graduation / migration state visibility
 
 ### Data Sources
 
-Planned architecture should prioritize:
+The product layer prioritizes:
 
 - On-chain Meteora state
 - Jupiter metadata
 - GeckoTerminal
-- Birdeye fallback
-- Internal IDART indexing
+- Public token registries
+- Internal IDART market indexing
 
-Paid DexScreener metadata services are not required for the core product.
+### Next Step
+
+- [ ] Automatically register new IDART-originated launches in Discovery immediately after confirmed market creation
+- [ ] Populate indexed market-cap, volume, liquidity and holder fields from live data sources
 
 ---
 
-# 🚧 Phase 5 — Market Detail Pages
+# ✅ Phase 5 — Market Detail Pages
 
-## Status: Planned
+## Status: Mainnet Reference Page Live / Dynamic Routing Next
 
-Each launched market should have a dedicated page.
+The Mainnet MEMET market-detail page now serves as the reference design for future dynamically generated token pages.
 
-### Planned Market Data
+### Implemented on the MEMET reference page
 
-- [ ] Token name
-- [ ] Symbol
-- [ ] Logo
-- [ ] Base Mint
-- [ ] Quote Mint
-- [ ] Market Profile
-- [ ] Economics mode
-- [ ] Starting MC
-- [ ] Current MC
-- [ ] Graduation MC
-- [ ] Bonding progress
-- [ ] Migration state
-- [ ] Creator fee accrual
-- [ ] Partner / protocol fee accrual
-- [ ] Holder allocation accounting
-- [ ] Volume
-- [ ] Liquidity
-- [ ] Holders
+- [x] Token name
+- [x] Symbol
+- [x] Logo
+- [x] Base Mint
+- [x] DBC Pool
+- [x] Market Profile
+- [x] Economics mode
+- [x] Launch configuration
+- [x] Migration state
+- [x] Project links
+- [x] Public metadata
+- [x] Explorer links
+- [x] Official GeckoTerminal chart integration
+- [x] Jupiter embedded trading interface
+- [x] Fee / claim-status surfaces
+
+### Next Step
+
+- [ ] Dynamic `/token/<mint>` routing
+- [ ] Automatic page hydration from registry + on-chain + metadata sources
+- [ ] Live indexed market cap
+- [ ] Live liquidity
+- [ ] Live volume
+- [ ] Holder count
 - [ ] Transaction history
-- [ ] Project links
-- [ ] Metadata
-- [ ] Explorer links
-
-### Trading Experience
-
-- [ ] Buy / Sell interface
-- [ ] Swap quote preview
-- [ ] Slippage settings
-- [ ] Transaction simulation
-- [ ] Wallet confirmation
-- [ ] Explorer transaction link
+- [ ] Wallet-aware claim surfaces when the Holder Rewards Router is live
 
 ---
 
-# 🚧 Phase 6 — Quote Asset Registry
+# ✅ Phase 6 — Quote Asset Registry
 
-## Status: Planned / Technical Validation Underway
+## Status: Public Registry Live / Multi-Asset Validation Active
 
-IDART FUN is being designed to support programmable quote markets beyond SOL.
+IDART FUN is designed to support programmable quote markets beyond SOL.
 
-### Initial Quote Assets
+### Current Quote Surfaces
 
 - [x] SOL
-- [ ] USDC
-- [ ] Compatible SPL tokens
-- [ ] Compatible Token-2022 tokens
-- [ ] xStocks
-- [ ] Compatible PreStocks
+- [x] USDC surfaced in the product
+- [x] Compatible Solana SPL-token route surfaced
+- [x] Compatible Token-2022 inspection
+- [x] **1,274+ xStocks** discoverable through the current Quote Asset Registry
+- [x] **8 PreStocks** integrated into the current quote catalog
 
-### xStocks / Token-2022 Direction
+### xStocks Mainnet Compatibility
 
-Meteora ecosystem guidance confirmed that Token-2022 xStocks can be used as `quoteMint` in DBC.
+The xStock quote-market path has been validated against real Solana Mainnet state using **AAPLx** as the representative stock-quote asset.
 
-Scaled UI Amount is not itself considered a blocker.
+- [x] Real AAPLx quote mint resolved
+- [x] Token-2022 inspection
+- [x] Meteora TokenBadge resolved
+- [x] IDART exact DBC config simulation: PASS
+- [x] Fresh AAPLx `createPool` builder: PASS
+- [x] Fresh AAPLx Mainnet simulation: PASS
+- [x] Zero-cost validation path: `0 SOL`
+- [x] No wallet signature or broadcast required for the compatibility test
 
-Transfer Hook assets require separate DAMM v2 compatibility handling.
+### Registry Inspection
 
-### Registry Validation
+The registry architecture inspects:
 
-The IDART Quote Asset Registry should inspect:
+- [x] Mint address
+- [x] Token program
+- [x] Decimals
+- [x] Metadata
+- [x] Token-2022 extensions
+- [x] Scaled UI Amount
+- [x] Transfer Hook
+- [x] Transfer Fee configuration
+- [x] TokenBadge availability where applicable
+- [x] Compatibility state
 
-- [ ] Mint address
-- [ ] Token program
-- [ ] Decimals
-- [ ] Supply
-- [ ] Metadata
-- [ ] Token-2022 extensions
-- [ ] Scaled UI Amount
-- [ ] Transfer Hook
-- [ ] Transfer Fee
-- [ ] Permanent Delegate
-- [ ] Mint Close Authority
-- [ ] Freeze Authority
-- [ ] Compatibility flags
-- [ ] Allow / reject status
+### PreStocks
 
-### Goal
+Eight PreStocks are integrated into the public quote catalog as part of the Stocklana product surface.
 
-Only quote assets validated as compatible should be exposed in the Launch UI.
+The team is continuing compatibility validation across their specific Token-2022 mint configurations while keeping the registry integration and product UX available for evaluation.
 
 ---
 
@@ -246,7 +251,7 @@ Only quote assets validated as compatible should be exposed in the Launch UI.
 
 Meteora DBC provides native Creator and Partner fee accounting.
 
-IDART's economics model requires an additional protocol layer to distribute the holder allocation transparently.
+IDART's economics model adds a protocol layer intended to make holder allocations transparent and claimable.
 
 ### Planned
 
@@ -259,10 +264,6 @@ IDART's economics model requires an additional protocol layer to distribute the 
 - [ ] Protocol-side accounting
 - [ ] Transparent reward reporting
 - [ ] Security review
-
-### Important
-
-The public product should not claim that holder-by-holder rewards are fully deployed until this router is live.
 
 ---
 
@@ -316,17 +317,18 @@ https://idartfun.xyz/idart-api-for-builders/
 
 ### Wallet Compatibility
 
-- [ ] Wallet-first multi-signer handling
-- [ ] Additional signers after wallet signing where required
-- [ ] Phantom Lighthouse compatibility improvements
-- [ ] Multi-wallet compatibility testing
+- [x] Wallet-first signing order for the current hardened Mainnet path
+- [x] Additional signers applied after wallet signing where required
+- [x] Transaction-size guards in the current browser flow
+- [ ] Expanded multi-wallet compatibility testing
+- [ ] Additional wallet-security compatibility improvements
 
 ### Transaction Size
 
-- [ ] Serialized transaction size monitoring
-- [ ] Address Lookup Table support
-- [ ] Room for wallet security instructions
-- [ ] Oversized transaction splitting
+- [x] Serialized transaction size monitoring
+- [ ] Address Lookup Table support where appropriate
+- [x] Room preserved for wallet-security instructions
+- [x] Oversized-transaction detection
 
 ### Confirmation & Retry Safety
 
@@ -349,7 +351,7 @@ https://idartfun.xyz/idart-api-for-builders/
 ### Security Review
 
 - [ ] External code review
-- [ ] Smart-contract / protocol-layer review where applicable
+- [ ] Protocol-layer review where applicable
 - [ ] API security review
 - [ ] Holder Rewards Router review
 - [ ] Production launch checklist
@@ -373,7 +375,7 @@ https://idartfun.xyz/idart-api-for-builders/
 - [ ] Additional Market Profiles
 - [ ] Custom liquidity shapes
 - [ ] Custom graduation templates
-- [ ] RWA-oriented profiles
+- [ ] Additional RWA-oriented profiles
 - [ ] Stock-quote market templates
 - [ ] PreStock market templates
 
@@ -411,6 +413,11 @@ Each product should maintain its own identity, roadmap and user base while remai
 - [x] Post-submission browser validation
 - [x] Mainnet end-to-end validation
 - [x] Verified DAMM v2 migration proof
+- [x] Discovery Markets public layer
+- [x] Mainnet market-detail reference page
+- [x] 1,274+ xStocks registry
+- [x] 8 PreStocks integrated into the quote catalog
+- [x] AAPLx xStock Mainnet compatibility simulation
 
 The Stocklana submission repository should remain stable during judging.
 
@@ -418,18 +425,20 @@ Do not rename, transfer or rewrite its history before judging is complete.
 
 ## World's Fair
 
-Planned preparation:
+Preparation focus:
 
-- [ ] Dedicated IDART FUN GitHub presence
+- [ ] Dedicated IDART FUN GitHub presence after Stocklana judging
 - [ ] Updated product video
-- [ ] Updated architecture documentation
-- [ ] Discovery Markets
-- [ ] Market Detail pages
-- [ ] Quote Asset Registry
+- [x] Updated architecture documentation
+- [x] Discovery Markets
+- [x] Mainnet market-detail reference page
+- [x] Quote Asset Registry
+- [ ] Automatic post-launch Discovery registration
+- [ ] Dynamic `/token/<mint>` market pages
 - [ ] Holder Rewards Router progress
 - [ ] Builders API progress
-- [ ] Security hardening
-- [ ] Mainnet product evidence
+- [ ] Additional security hardening
+- [x] Mainnet product evidence
 
 ---
 
@@ -446,6 +455,8 @@ The long-term goal is to become a **programmable market-design layer for Solana*
 - how holders participate;
 - how the market graduates;
 - and how the infrastructure can be embedded into third-party products.
+
+The product direction is to connect token creation, configurable economics, multi-asset quote markets, Discovery and market-detail experiences into one coherent launch-to-market lifecycle.
 
 ---
 
