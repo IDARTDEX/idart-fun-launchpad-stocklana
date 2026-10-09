@@ -83,13 +83,38 @@ This transaction completes the public Mainnet proof chain:
 
 ---
 
+# 📈 Additional Mainnet xStock Compatibility Validation
+
+IDART FUN also completed a **zero-cost Mainnet RPC compatibility validation** using real **AAPLx** as the representative xStock quote asset.
+
+## AAPLx Validation Result
+
+| Field | Result |
+|---|---|
+| **AAPLx Quote Mint** | `XsbEhLAtcf6HdfpFZ5xEMdqW8nfAvcsP5bdudRLJzJp` |
+| **Token Program** | Token-2022 |
+| **Meteora TokenBadge** | Resolved |
+| **IDART Exact DBC Config Simulation** | **PASS** |
+| **Fresh AAPLx createPool Builder** | **PASS** |
+| **Fresh AAPLx Mainnet Simulation** | **PASS** |
+| **Units Consumed** | `111031` |
+| **Diagnostic Cost** | `0 SOL` |
+| **Wallet Signature** | Not requested |
+| **Broadcast** | None |
+
+This validates the IDART xStock quote-market compatibility path against real Solana Mainnet state without requiring a paid Mainnet transaction.
+
+The current public Quote Asset Registry exposes **1,274+ xStocks**, with AAPLx serving as the representative Mainnet compatibility proof for the stock-quote path.
+
+---
+
 # 🛡️ Validation Notes
 
-The Mainnet lifecycle has now been proven end-to-end.
+The core Mainnet DBC → DAMM v2 lifecycle has been proven end-to-end.
 
-No additional Mainnet testing is required for the Stocklana evaluation.
+The xStock quote-market path has additionally been validated through real Mainnet state simulation using AAPLx and Meteora TokenBadge resolution.
 
-Further Mainnet validation should be reserved for material new protocol features after Devnet testing, transaction simulation and explicit spend limits.
+Further Mainnet spending is reserved for material production features after simulation and explicit spend controls.
 
 ---
 
