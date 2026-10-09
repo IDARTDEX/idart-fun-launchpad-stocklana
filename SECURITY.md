@@ -2,90 +2,92 @@
 
 This repository is a public product showcase and contains no production secrets.
 
-Do not publish:
+Never publish:
+
 - seed phrases
 - private keys
 - wallet keypair files
 - `.env` files
 - RPC/API secrets
 - authentication tokens
+- deployment secrets
 
 Security-sensitive implementation details are maintained outside this public showcase repository.
 
-# SECURITY UPDATE — OCTOBER 2026
-
-> Add this section to the existing `SECURITY.md`.
->
-> Keep the current Security content and append this block below it.
-
 ---
 
-# 🔐 Wallet Security & Transaction Hardening
+# 🔐 Non-Custodial Security Model
 
 IDART FUN is non-custodial.
 
 Users approve their own transactions and IDART FUN never requests a seed phrase, private key or wallet recovery phrase.
 
----
+The product is designed around the principle:
 
-## Core Transaction Security Rules
-
-- Simulate transactions before wallet approval when supported by the transaction path
-- Never automatically resend a transaction only because RPC confirmation is delayed
-- Reconcile an already-broadcast signature before allowing a retry
-- Use recent blockhash and `lastValidBlockHeight` to identify expired or dropped transactions
-- Preserve valid Meteora ComputeBudget instructions instead of injecting duplicate instruction types
-- Never recreate a token, DBC config or pool merely because a read RPC failed
-- Require safety and risk acknowledgements before launch, swap, migration and claim actions
+## User Signs. IDART Never Holds the Key.
 
 ---
 
-# 👛 Phantom Compatibility
+# Core Transaction Security Rules
 
-Following direct feedback from Phantom support, IDART FUN is updating multi-signer transaction handling to follow a **wallet-first signing sequence**.
+The current product security model includes:
 
-## Recommended Signing Order
+- transaction simulation before wallet approval when supported by the transaction path;
+- no automatic resend solely because RPC confirmation is delayed;
+- reconciliation of already-broadcast signatures before retry;
+- recent blockhash and `lastValidBlockHeight` handling;
+- preservation of valid Meteora ComputeBudget instructions;
+- protection against duplicate token / config / pool creation during uncertain RPC reads;
+- safety and risk acknowledgements before launch, swap, migration and claim-related actions;
+- explicit separation between zero-cost diagnostic simulation and real Mainnet broadcast paths.
+
+---
+
+# 👛 Wallet-First Multi-Signer Handling
+
+The hardened Mainnet signing path uses a wallet-first sequence for multi-signer transactions.
 
 ```js
-// Phantom wallet signs first
+// Wallet signs first
 let signedTx = await signer.signTransaction(tx);
 
-// Additional signers sign afterward
+// Additional required signers are applied afterward
 signedTx.partialSign(additionalSigner);
 ```
 
-For Meteora flows that return temporary or position-related keypairs, the production path should:
+For flows that require temporary or position-related keypairs, the production path is designed to:
 
-1. Build the transaction
-2. Simulate when appropriate
-3. Request the wallet signature first
-4. Apply required additional signers afterward
-5. Serialize and broadcast
-6. Confirm using blockhash-aware expiry handling
+1. build the transaction;
+2. simulate when appropriate;
+3. request the wallet signature;
+4. apply required additional signers afterward;
+5. serialize and broadcast;
+6. confirm using blockhash-aware expiry handling.
 
 ---
 
 # 📦 Transaction Size Hardening
 
-Phantom support also identified that one of the validated transactions was approaching Solana's transaction-size limit.
+The current browser flow includes serialized transaction-size monitoring.
 
-Production hardening therefore includes:
+Production hardening includes:
 
-- Monitoring serialized transaction size
-- Using **Address Lookup Tables (ALT)** where appropriate
-- Leaving room for wallet security / Lighthouse instructions
-- Avoiding unnecessary duplicate instructions
-- Splitting oversized or excessive-compute workflows when necessary
+- monitoring serialized transaction size;
+- keeping transaction-size headroom for wallet security instructions;
+- detecting oversized transactions before broadcast;
+- avoiding unnecessary duplicate instructions;
+- splitting oversized workflows when necessary;
+- evaluating Address Lookup Tables where appropriate.
 
 ---
 
 # ⚙️ Compute Budget Handling
 
-The migration path must preserve Meteora SDK ComputeBudget instructions when they are already present.
+The migration path preserves Meteora SDK ComputeBudget instructions when they are already present.
 
-IDART FUN should not inject duplicate ComputeBudget instruction types into the same transaction.
+IDART FUN avoids injecting duplicate ComputeBudget instruction types into the same transaction.
 
-This avoids failures such as duplicate instruction errors during DAMM v2 migration.
+This protects the DAMM v2 migration flow from duplicate-instruction failures.
 
 ---
 
@@ -93,21 +95,56 @@ This avoids failures such as duplicate instruction errors during DAMM v2 migrati
 
 If a transaction is broadcast but confirmation is uncertain:
 
-- Store the submitted signature
-- Check whether it landed before building a replacement transaction
-- Do not assume a timeout means failure
-- Treat blockhash expiry as distinct from RPC confirmation delay
-- Only allow a retry after reconciliation
+- store the submitted signature;
+- check whether it landed before building a replacement transaction;
+- do not assume a timeout means failure;
+- treat blockhash expiry as distinct from RPC confirmation delay;
+- only allow a retry after reconciliation.
 
 This reduces the risk of duplicated user actions or duplicated on-chain operations.
 
 ---
 
-# 🧾 Security Scope
+# 🧪 Zero-Cost Mainnet Diagnostics
 
-These changes are **production-hardening improvements completed after the original Stocklana submission**.
+IDART FUN also uses Mainnet RPC simulation for compatibility testing where a real broadcast is not required.
 
-They should not be presented as features that existed at the original hackathon deadline.
+The xStock compatibility diagnostic used for AAPLx:
+
+- resolves real Mainnet state;
+- builds the IDART DBC configuration path;
+- builds a fresh pool transaction against AAPLx-compatible Mainnet state;
+- runs `simulateTransaction`;
+- requests no wallet signature;
+- broadcasts nothing;
+- spends `0 SOL`.
+
+This allows protocol compatibility to be checked against real Mainnet state before deciding whether a paid transaction is necessary.
+
+---
+
+# 🛡️ Public Product Safety
+
+The Launch interface includes safety and risk acknowledgements before on-chain transaction actions.
+
+The public product also distinguishes:
+
+- validated Mainnet / Devnet proof;
+- public Discovery and market-detail experiences;
+- compatibility diagnostics;
+- future protocol modules such as the Holder Rewards Router.
+
+This keeps product status visible without exposing private security implementation.
+
+---
+
+# Security Scope
+
+These security and transaction-hardening improvements were completed as continued product development after the original Stocklana submission.
+
+The original submission snapshot remains preserved separately in:
+
+[`SUBMISSION_SNAPSHOT.md`](./SUBMISSION_SNAPSHOT.md)
 
 ---
 
