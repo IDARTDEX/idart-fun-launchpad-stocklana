@@ -1,12 +1,25 @@
 {
-  "name": "IDART Fun Launchpad Devnet Token",
+  "name": "IDART FUN Launchpad Devnet Token",
   "symbol": "IDART",
-  "description": "Generic fallback metadata for tokens launched during IDART Fun Launchpad Devnet testing. The on-chain token name and symbol are set by the creator at launch.",
-  "image": "https://launchpad.idartdex.xyz/wp-content/uploads/2026/09/IDART-DEX-3D-HD.gif",
-  "external_url": "https://launchpad.idartdex.xyz",
+  "description": "Generic fallback metadata for tokens launched during IDART FUN Devnet testing. The on-chain token name and symbol are set by the creator at launch. IDART FUN is a Solana-native programmable market launchpad powered by Meteora DBC.",
+  "image": "https://idartfun.xyz/wp-content/uploads/2026/10/Logo-IDART-FUN-Background-Solana-Color-3D-Rotating-gif.gif",
+  "external_url": "https://idartfun.xyz",
   "attributes": [
-    {"trait_type": "Launchpad", "value": "IDART Fun Launchpad"},
-    {"trait_type": "Network", "value": "Solana Devnet"},
-    {"trait_type": "Engine", "value": "Meteora DBC"}
+    {
+      "trait_type": "Launchpad",
+      "value": "IDART FUN"
+    },
+    {
+      "trait_type": "Network",
+      "value": "Solana Devnet"
+    },
+    {
+      "trait_type": "Engine",
+      "value": "Meteora DBC"
+    },
+    {
+      "trait_type": "Market Layer",
+      "value": "Programmable Market Launch"
+    }
   ]
 }
