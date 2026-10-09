@@ -128,6 +128,10 @@ IDART FUN completed and publicly verified a real Mainnet launch through the full
 - **Instruction:** `Migration_damm_v2`
 - **Migration Target:** Meteora DAMM v2
 
+![Verified Mainnet DAMM v2 migration](./06-mainnet-damm-v2-migration.png)
+
+*Verified Mainnet DAMM v2 migration confirmation from the public transaction record.*
+
 The public Launch page also includes a **Verified Mainnet Validation Archive** so evaluators can inspect the completed lifecycle without initiating another Mainnet test.
 
 ---
