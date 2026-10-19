@@ -409,6 +409,28 @@ Future IDART FUN development can move to a dedicated IDART FUN GitHub presence w
 
 ---
 
+
+---
+
+### 🔒 Project Development Continuity & Private Repository Access
+
+**IDART FUN remains under active development beyond its original Stocklana hackathon submission.**
+
+This public repository preserves the project's Stocklana development milestones, technical validation evidence, and submission documentation. More recent project progress, expanded capabilities, technical validations, and roadmap updates are being documented separately in a newer private IDART FUN repository.
+
+To protect proprietary implementation details during the platform's Public Beta and pre-launch development stages, these updates are not being fully mirrored to this public repository.
+
+**Official Stocklana hackathon organizers and authorized judges are welcome to request access to our more up-to-date private repository** for further project evaluation, if needed.
+
+Access requests may be submitted through our official team contact:
+
+- **IDART FUN Team:** [info@idartfun.xyz](mailto:info@idartfun.xyz)
+- **Official Website:** [https://idartfun.xyz](https://idartfun.xyz)
+
+We remain committed to continuous development, transparent technical validation, and the successful public launch of IDART FUN.
+
+**Important:** The original Stocklana submission and its historical development evidence remain preserved. Subsequent development milestones are documented separately and should not be interpreted as work completed during the original hackathon period.
+---
 ### IDART FUN
 
 **Design the Market. Launch the Asset.**
