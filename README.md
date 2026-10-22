@@ -250,11 +250,35 @@ This validation demonstrates that the IDART browser engine can resolve the real 
 
 The broader xStocks registry remains compatibility-aware because individual assets can differ in Token-2022 extensions and mint configuration. IDART therefore inspects supported quote assets before exposing execution paths.
 
-## PreStocks
+## PreStocks — October 2026 Public Beta Update
 
-IDART FUN currently exposes **8 PreStocks** in the Quote Asset Registry as part of the Stocklana product surface.
+IDART FUN currently exposes **8 PreStocks** in its Quote Asset Registry. Following **Meteora DBC Program v0.2.2 and SDK v2.0.0**, our dedicated **Engineering Lab V2.1** has completed preliminary **read-only assessments of PreStocks OpenAI and Anthropic** as potential Token-2022 Quote Assets.
 
-The PreStocks integration is being actively refined alongside the broader Token-2022 quote-asset compatibility work. The current public product keeps these assets visible in the registry while the team continues validating the most appropriate execution path for their specific mint configurations and welcomes ecosystem feedback as that work progresses.
+### Latest validation progress
+
+- Token-2022 mint and extension detection
+- Transfer Fee and Transfer Hook identification
+- Epoch-based transfer-fee configuration inspection
+- Meteora Token Badge account existence checks
+- Successful SDK 2.0.0 loading and `createConfig2` API detection
+
+These results are **preliminary compatibility checks**, not evidence of a completed PreStocks-quoted launch. The remaining PreStocks tokens and other eligible quote assets require their own compatibility assessments.
+
+### Engineering Lab V2.1 — PreStocks screenshots
+
+**PreStocks OpenAI — read-only technical validation**
+
+![IDART FUN Engineering Lab V2.1 — PreStocks OpenAI](./IDART_FUN_Prestocks_OpenAI_Lab_V2.1.png)
+
+**PreStocks Anthropic — read-only technical validation**
+
+![IDART FUN Engineering Lab V2.1 — PreStocks Anthropic](./IDART_FUN_Prestocks_Anthropic_Lab_V2.1.png)
+
+### Next validation milestones
+
+IDART FUN is preparing further transaction-level and **Mainnet lifecycle validation**, including real DBC market creation and swaps, fee accounting, graduation and **DBC → DAMM v2 migration** with eligible tokenized Quote Assets. Testing will be expanded selectively to additional asset families where protocol and issuer restrictions permit.
+
+**Status:** Public Beta — on-chain PreStocks pool creation, swaps and migration **not yet validated**. This is **post-Stocklana-submission progress**, separate from the original submission snapshot.
 
 ---
 
@@ -382,6 +406,8 @@ Current post-submission progress now also includes:
 - **1,274+ xStocks** in the Quote Asset Registry
 - **8 PreStocks** integrated into the quote catalog
 - AAPLx-based Mainnet xStock compatibility validation through zero-cost RPC simulation
+- Preliminary PreStocks OpenAI / Anthropic Token-2022 compatibility checks after Meteora DBC Program v0.2.2 and SDK v2.0.0
+- New Engineering Lab V2.1 screenshots included in the [PreStocks validation section](#prestocks--october-2026-public-beta-update)
 
 ---
 
